@@ -1,0 +1,16 @@
+# copy this file to /lib/systemd/system/
+
+[Unit]
+Description=things-switchbot
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/node index.js
+WorkingDirectory=/home/pi/mozilla-iot-things-switchbot
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target

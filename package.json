@@ -1,0 +1,20 @@
+{
+  "name": "mozilla-iot-things-switchbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "status": "systemctl status things-switchbot.service",
+    "prod": "sudo systemctl start things-switchbot",
+    "stop": "sudo systemctl stop things-switchbot",
+    "restart": "sudo systemctl restart things-switchbot",
+    "log": "journalctl -u things-switchbot.service -f"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "switchbot": "0.0.4",
+    "webthing": "^0.12.3"
+  }
+}
