@@ -6,6 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "status": "systemctl status things-switchbot.service",
+    "setup:service": "sudo cp things-switchbot.service /lib/systemd/system/.",
+    "setup:enable": "sudo systemctl enable things-switchbot",
     "prod": "sudo systemctl start things-switchbot",
     "stop": "sudo systemctl stop things-switchbot",
     "restart": "sudo systemctl restart things-switchbot",
